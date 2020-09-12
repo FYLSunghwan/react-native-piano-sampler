@@ -3,15 +3,15 @@ import { StyleSheet, View, Text } from 'react-native';
 import PianoSampler from 'react-native-piano-sampler';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    PianoSampler.multiply(3, 7).then(setResult);
-  }, []);
+  PianoSampler.prepare();
+  PianoSampler.playNote(60, 127);
+  setTimeout(() => {
+    PianoSampler.stopNote(60);
+  }, 2000);
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>Application Load Complete</Text>
     </View>
   );
 }

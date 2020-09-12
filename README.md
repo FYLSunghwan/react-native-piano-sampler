@@ -1,9 +1,11 @@
 # react-native-piano-sampler
 
+[![NPM](https://nodei.co/npm/react-native-piano-sampler.png?compact=true)](https://nodei.co/npm/react-native-piano-sampler/)
+
 React Native Piano Sampler : Reads sf2 with FluidSynth(on Android) or sfz with AudioKit(on iOS)
 
 - [x] iOS/iPadOS Implementation
-- [ ] Android Implementation  
+- [x] Android Implementation  
 
 ## Installation
 
@@ -33,7 +35,8 @@ npm install --save react-native-piano-sampler
 - Goto the iOS project folder, and do `pod install`
 
 ### Prerequisites (Android)
-- Preparing
+- Download the [soudfont(Full Grand Piano)](https://drive.google.com/file/d/1JHae8NALSvLDuF9nFqtqqipcY9Fo1fuD/view?usp=sharing) and move to `{ProjDirectory}/android/app/src/main/assets`.
+- You are good to go :smile:
 
 
 ### Usage in React Native Code

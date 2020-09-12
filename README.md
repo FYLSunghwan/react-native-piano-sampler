@@ -5,7 +5,7 @@
 React Native Piano Sampler : Reads sf2 with FluidSynth(on Android) or sfz with AudioKit(on iOS)
 
 - [x] iOS/iPadOS Implementation
-- [ ] Android Implementation  
+- [x] Android Implementation  
 
 ## Installation
 

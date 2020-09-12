@@ -1,7 +1,9 @@
 import { NativeModules } from 'react-native';
 
 type PianoSamplerType = {
-  multiply(a: number, b: number): Promise<number>;
+  playNote(midiNum: number, velocity: number): any;
+  stopNote(midiNum: number): any;
+  prepare(): any;
 };
 
 const { PianoSampler } = NativeModules;

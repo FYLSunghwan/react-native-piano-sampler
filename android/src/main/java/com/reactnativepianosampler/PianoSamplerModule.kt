@@ -11,14 +11,18 @@ class PianoSamplerModule(reactContext: ReactApplicationContext) : ReactContextBa
         return "PianoSampler"
     }
 
-    // Example method
-    // See https://facebook.github.io/react-native/docs/native-modules-android
     @ReactMethod
-    fun multiply(a: Int, b: Int, promise: Promise) {
-    
-      promise.resolve(a * b)
-    
+    fun playNote(midiNum: Int, velocity: Int) {
+        print("Kotlin> playNote");
     }
 
-    
+    @ReactMethod
+    fun stopNote(midiNum: Int) {
+        print("Kotlin> stopNote");
+    }
+
+    @ReactMethod
+    fun prepare() {
+        print("Kotlin> prepare");
+    }
 }

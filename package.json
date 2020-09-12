@@ -1,6 +1,6 @@
 {
   "name": "react-native-piano-sampler",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "React Native Piano Sampler : Reads sf2 with FluidSynth(on Android) or sfz with AudioKit(on iOS)",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",

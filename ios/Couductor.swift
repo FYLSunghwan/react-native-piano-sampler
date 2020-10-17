@@ -54,6 +54,17 @@ class Conductor {
         sampler1.stop(noteNumber: note)
     }
 
+    func setVolume(volume: Double) {
+        var _volume = volume
+        if(_volume > 1) {
+            _volume = 1
+        }
+        if(_volume < 0) {
+            _volume = 0
+        }
+        sampler1.masterVolume = _volume
+    }
+
     func useSound(_ sound: String) {
         let soundsFolder = Bundle.main.bundleURL.appendingPathComponent("UprightPianoKW-SFZ-20190703").path
         sampler1.unloadAllSamples()

@@ -12,9 +12,10 @@ class Conductor {
     // Globally accessible
     static let sharedInstance = Conductor()
 
-    var sampler1 = AKSampler()
+    var sampler1 = AKSampler(masterVolume: 1.0)
 
     init() {
+        print("Conductor.init()")
     
         // Session settings
         AKAudioFile.cleanTempDirectory()
@@ -34,9 +35,9 @@ class Conductor {
 
        
         // Set Output & Start AudioKit
-        AudioKit.output = sampler1
+        AKManager.output = sampler1
         do {
-            try AudioKit.start()
+            try AKManager.start()
         } catch {
             print("AudioKit.start() failed")
         }
@@ -51,6 +52,17 @@ class Conductor {
 
     func stopNote(note: MIDINoteNumber) {
         sampler1.stop(noteNumber: note)
+    }
+
+    func setVolume(volume: Double) {
+        var _volume = volume
+        if(_volume > 1) {
+            _volume = 1
+        }
+        if(_volume < 0) {
+            _volume = 0
+        }
+        sampler1.masterVolume = _volume
     }
 
     func useSound(_ sound: String) {

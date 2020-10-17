@@ -28,11 +28,6 @@ class PianoSampler: NSObject {
         let midiNum_ = MIDINoteNumber(midiNum)
         conductor.stopNote(note: midiNum_)
     }
-
-    @objc(setVolume:)
-    func setVolume(_ volume: Double) {
-        conductor.setVolume(volume: volume)
-    }
     
     @objc
     func prepare() {

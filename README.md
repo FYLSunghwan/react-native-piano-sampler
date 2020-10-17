@@ -54,6 +54,8 @@ PianoSampler.prepare();
 PianoSampler.playNote(midiNum, velocity);
 // Stop the pian sound
 PianoSampler.stopNote(midiNum);
+// Set Volume 0~1.0
+PianoSampler.setVolume(0.5);
 ```
 
 ## Contributing

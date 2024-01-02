@@ -16,7 +16,7 @@ npm install --save react-native-piano-sampler
 ## Usage
 
 ### Prerequisites (iOS/iPadOS)
-- First, Download [this(Upright Piano KW)](http://freepats.zenvoid.org/Piano/UprightPianoKW/UprightPianoKW-SFZ-20190703.tar.xz) soundfont. And unarchive as `UprightPianoKW-SFZ-20190703`.
+- First, Download [this(Upright Piano KW)](https://web.archive.org/web/20191005062358/http://freepats.zenvoid.org/Piano/UprightPianoKW/UprightPianoKW-SFZ-20190703.tar.xz) soundfont. And unarchive as `UprightPianoKW-SFZ-20190703`.
   - The Folder structure must be like this.
   ```bash
     UprightPianoKW-SFZ-20190703
@@ -35,7 +35,7 @@ npm install --save react-native-piano-sampler
 - Goto the iOS project folder, and do `pod install`
 
 ### Prerequisites (Android)
-- Download the [soudfont(Full Grand Piano)](https://drive.google.com/file/d/1JHae8NALSvLDuF9nFqtqqipcY9Fo1fuD/view?usp=sharing) and move to `{ProjDirectory}/android/app/src/main/assets`.
+- Download the [soundfont(Full Grand Piano)](https://drive.google.com/file/d/1JHae8NALSvLDuF9nFqtqqipcY9Fo1fuD/view?usp=sharing) and move to `{ProjDirectory}/android/app/src/main/assets`.
 - You are good to go :smile:
 
 

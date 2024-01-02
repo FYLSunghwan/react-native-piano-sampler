@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 import AudioKit
 
 @objc(PianoSampler)
@@ -41,6 +40,7 @@ class PianoSampler: NSObject {
         print("prepared")
     }
 
+    @objc
     static func requiresMainQueueSetup() -> Bool {
         return true
     }

@@ -18,5 +18,5 @@ Pod::Spec.new do |s|
   
 
   s.dependency "React"
-  s.dependency "AudioKit/Core"
+  s.dependency "AudioKit/Core", '~> 4'
 end

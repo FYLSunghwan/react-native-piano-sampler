@@ -4,7 +4,6 @@ import com.facebook.react.bridge.LifecycleEventListener
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import okio.Okio
 import java.io.File
 
 class PianoSamplerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext), LifecycleEventListener {
@@ -54,9 +53,9 @@ class PianoSamplerModule(reactContext: ReactApplicationContext) : ReactContextBa
 
     private fun copySF2IfNecessary() {
         if (sf2file.exists() && sf2file.length() > 0) return
-        Okio.source(context.assets.open(SF2_FILE_NAME)).use { a ->
-            Okio.buffer(Okio.sink(sf2file)).use { b ->
-                b.writeAll(a)
+        context.assets.open(SF2_FILE_NAME).use { input ->
+            sf2file.outputStream().use { output ->
+                input.copyTo(output, 1024)
             }
         }
     }

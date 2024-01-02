@@ -342,7 +342,7 @@ void fluid_opensles_callback(SLAndroidSimpleBufferQueueItf caller, void *pContex
     float *float_buf = dev->float_buffer;
     int buffer_size;
     int i, k;
-    int err;
+    //int err;
     float *float_callback_buffers[2];
     SLresult result;
 
@@ -380,7 +380,7 @@ void fluid_opensles_callback(SLAndroidSimpleBufferQueueItf caller, void *pContex
         result = (*caller)->Enqueue (
                 dev->player_buffer_queue_interface, short_buf, buffer_size * sizeof (short) * NUM_CHANNELS);
     if (result != 0) {
-        err = result;
+        //err = result;
         /* Do not simply break at just one single insufficient buffer. Go on. */
     }
 }
@@ -393,7 +393,7 @@ fluid_opensles_audio_run(void* d)
     short *short_buf = NULL;
     float *float_buf = NULL;
     int buffer_size;
-    int err;
+    //int err;
     SLresult result;
 
     buffer_size = dev->buffer_size;
@@ -429,7 +429,7 @@ fluid_opensles_audio_run(void* d)
             result = (*dev->player_buffer_queue_interface)->Enqueue (
                     dev->player_buffer_queue_interface, short_buf, buffer_size * sizeof (short) * NUM_CHANNELS);
         if (result != 0) {
-            err = result;
+            //err = result;
             /* Do not simply break at just one single insufficient buffer. Go on. */
         }
     }	/* while (dev->cont) */
